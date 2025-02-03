@@ -1,0 +1,10 @@
+package fxml;
+
+public class LoginController {
+
+	
+	public void open() {
+		System.out.println("Entrar");
+	}
+	
+}

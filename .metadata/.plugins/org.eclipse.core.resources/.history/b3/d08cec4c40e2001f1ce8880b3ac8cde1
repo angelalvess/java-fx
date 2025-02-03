@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1">
+
+	<Label text="Welcome"
+	 GridPane.columnIndex="0" GridPane.rowIndex="0"
+	 ></Label>
+	
+	<Label text="E-mail: "  GridPane.columnIndex="0" GridPane.rowIndex="1" ></Label>
+	<Label text="Password: "  GridPane.columnIndex="0" GridPane.rowIndex="2" ></Label>
+	<Button text="Sign In"  GridPane.columnIndex="3" GridPane.rowIndex="0" ></Button>
+</GridPane>
