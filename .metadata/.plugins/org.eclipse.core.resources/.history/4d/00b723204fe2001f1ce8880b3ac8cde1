@@ -12,15 +12,13 @@ public class AppFXML extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		String fileCssString = getClass().getResource("/fxml/Login.css").toExternalForm();
 		URL fileFXML = getClass().getResource("/fxml/Login.fxml");
 		GridPane raiz = FXMLLoader.load(fileFXML);
-
-		Scene sceneOne = new Scene(raiz, 350, 350);
-		sceneOne.getStylesheets().add(fileCssString);
-
+		
+		Scene sceneOne= new Scene(raiz, 200,200);
+		
 		primaryStage.setResizable(false);
-
+		
 		primaryStage.setScene(sceneOne);
 		primaryStage.show();
 	}

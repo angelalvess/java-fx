@@ -15,12 +15,13 @@ public class AppFXML extends Application {
 		String fileCssString = getClass().getResource("/fxml/Login.css").toExternalForm();
 		URL fileFXML = getClass().getResource("/fxml/Login.fxml");
 		GridPane raiz = FXMLLoader.load(fileFXML);
-
-		Scene sceneOne = new Scene(raiz, 350, 350);
+		
+		
+		Scene sceneOne= new Scene(raiz, 200,200);
 		sceneOne.getStylesheets().add(fileCssString);
-
+		
 		primaryStage.setResizable(false);
-
+		
 		primaryStage.setScene(sceneOne);
 		primaryStage.show();
 	}
