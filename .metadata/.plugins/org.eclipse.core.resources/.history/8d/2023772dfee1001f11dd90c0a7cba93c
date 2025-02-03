@@ -1,0 +1,14 @@
+.content {
+	-fx-background-color: #000;
+	
+	
+}
+
+.number {
+	-fx-font-size: 28px;
+	-fx-text-fill: #eee;
+}
+.title {
+	-fx-font-size: 28px;
+	-fx-text-fill: #48b2ee;
+}

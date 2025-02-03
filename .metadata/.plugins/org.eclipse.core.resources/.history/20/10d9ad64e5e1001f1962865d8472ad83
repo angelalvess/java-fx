@@ -1,0 +1,14 @@
+package com.angel.app.calculo;
+
+import com.angel.app.calculo.intern.OpArit;
+
+public class CalculatorImplementation
+
+	private OpArit opArit = new OpArit();
+
+	public Double summ(double... numbers) {
+		return opArit.summ(numbers);
+	}
+	
+		
+}

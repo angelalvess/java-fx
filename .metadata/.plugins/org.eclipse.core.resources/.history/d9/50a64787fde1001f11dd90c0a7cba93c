@@ -1,0 +1,4 @@
+.content {
+	-fx-background-color: red;
+	
+}

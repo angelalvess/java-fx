@@ -1,0 +1,79 @@
+package projects;
+
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class Wizard extends Application {
+
+	private Scene stepOneScene;
+	private Scene stepTwoScene;
+	private Scene stepTreeScene;
+	private Stage window = new Stage();
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+
+		createStepOne();
+		createStepTwo();
+		createStepTree();
+
+		window.setTitle("Wizard");
+		window.setScene(stepOneScene);
+		window.show();
+	}
+
+	private void createStepOne() {
+
+		Button buttonNext = new Button("Next screen 2 >>");
+		buttonNext.setOnAction(e -> window.setScene(stepTwoScene));
+
+		HBox hBox = new HBox();
+		hBox.setAlignment(Pos.CENTER);
+		hBox.getChildren().add(buttonNext);
+
+		stepOneScene = new Scene(hBox, 400, 400);
+	}
+
+	private void createStepTwo() {
+
+		Button buttonBack = new Button("<< Back screen 1 ");
+		buttonBack.setOnAction(e -> window.setScene(stepOneScene));
+
+		Button buttonNext = new Button("Next screen 3 >>");
+		buttonNext.setOnAction(e -> window.setScene(stepTreeScene));
+
+		HBox hBox = new HBox();
+		hBox.setAlignment(Pos.CENTER);
+		hBox.setSpacing(10);
+		hBox.getChildren().add(buttonBack);
+		hBox.getChildren().add(buttonNext);
+
+		stepTwoScene = new Scene(hBox, 400, 400);
+	}
+
+	private void createStepTree() {
+
+		Button buttonBack = new Button("<< Back screen 2");
+		buttonBack.setOnAction(e -> window.setScene(stepTwoScene));
+		
+		Button buttonExit = new Button("Finish!");
+		buttonExit.setOnAction(e -> System.exit(0));
+
+		HBox hBox = new HBox();
+		hBox.setAlignment(Pos.CENTER);
+		hBox.getChildren().add(buttonBack);
+		hBox.getChildren().add(buttonExit);
+
+		stepTreeScene = new Scene(hBox, 400, 400);
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+}

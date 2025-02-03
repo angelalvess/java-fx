@@ -1,0 +1,8 @@
+package app_api_public;
+
+public interface Calculator {
+	
+	public double summ(double... numbers);
+		
+	
+}
